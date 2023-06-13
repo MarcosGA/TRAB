@@ -1,0 +1,24 @@
+#include "stdio.h"
+#include "string.h"
+
+// arquivos txts diferentes 
+
+int main(void) {
+
+  char txt[] = ".txt";
+  char nome[20];
+  printf("digite um nome: ");
+  fgets(nome, 20, stdin); 
+
+  char strcat(nome, txt);
+
+  printf("%s", nome);
+  
+  FILE* fptr;
+
+  fptr = fopen(nome, "w");
+  fprintf(fptr, "%s tirou notas 10 12 13, sua media eh 22", nome);
+
+  fclose(fptr);
+  return 0;
+}
